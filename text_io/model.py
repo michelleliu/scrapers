@@ -11,7 +11,16 @@ class SectionContent:
 class ArticleContent:
     url: str
     title: str
+    publication_date: str
+    published_by: str
+    content_type: str
+    journal_title: str
+    doi: str
+    website: str
+    authors: str
+    email: str
+    language: str
     location: str
-    start_date: str
-    end_date: str
-    content: [SectionContent]
+    download_link: str
+    abstract: str
+    keywords: [str]
