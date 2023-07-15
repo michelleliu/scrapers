@@ -34,7 +34,10 @@ class SerContentExtractor:
                 page += 1
 
     def __extract(self, url) -> ArticleContent:
-        doc = self.__read_html(url)
+        try:
+            doc = self.__read_html(url)
+        except:
+            return ArticleContent(url, "Error: URL not found", None, None, None, None, None, None, None, None, None, None, None, None, None)
 
         title = self.__extract_title(doc)
         abstract = self.__extract_abstract(doc)
